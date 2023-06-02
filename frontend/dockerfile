@@ -1,0 +1,15 @@
+FROM node:19-slim
+WORKDIR /frontend
+COPY . .
+RUN npm install
+# docker build ./frontend -t frontend_image
+#############################################
+############################################
+#build 
+# docker run -d -p 3000:3000 frontend_image
+CMD npm start
+EXPOSE 3000
+
+
+
+

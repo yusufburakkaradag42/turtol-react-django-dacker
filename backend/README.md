@@ -41,3 +41,15 @@ $ git clone https://github.com/your-user-name/your-project-name
 
 <li>Frontend kısmını apimize bağlayabilmek için cors-headers paketini kullanacağız</li>
 <a href="https://github.com/adamchainz/django-cors-headers">Cors Headers paketi için</a>
+
+''' 
+###  Docker Clone İşlemi Yapma 
+docker pul yusufburakkaradag/backend_image               
+ docker pul yusufburakkaradag/frontend_image           
+  ''' 
+
+
+
+
+
+

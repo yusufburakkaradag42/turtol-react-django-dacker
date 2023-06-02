@@ -1,0 +1,31 @@
+
+FROM python:3.10.8-slim-bullseye
+
+
+# pyiçinde sağlıklı çalışabilmesi için ayar yapıyoruz 
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /backend 
+
+COPY . .
+#bir kere çalışır build ederken
+RUN pip install -r requirements.txt --no-cache-dir
+# cmd ise docker run dediğinde çalılşır
+CMD python manage.py runserver 0.0.0.0:8000
+# EXPOSE 8000
+
+# komple resert 
+# docker system prune -a -f 
+
+#imaj oluştrma 
+#docker build ./backend -t backend_image 
+
+#container yapma 
+# docker run -p 8000:8000  backend_image
+
+# deamon 
+# docker run -d -p 8000:8000 backend_image
+
+# arka planda çalışmasına bakmak için 
+# docker ps
